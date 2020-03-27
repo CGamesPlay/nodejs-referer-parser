@@ -1,7 +1,9 @@
 #!/bin/sh
 set -e
 
-latest_db="https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.yaml"
+#latest_db="https://s3-eu-west-1.amazonaws.com/snowplow-hosted-assets/third-party/referer-parser/referers-latest.yaml"
+# Use fork while I've got a PR out
+latest_db="https://raw.githubusercontent.com/CGamesPlay/referer-parser/master/resources/referers.yml"
 
 if ! which -s yaml2json; then
   echo "yaml2json not in PATH. Get it from here:" >&2

@@ -1,6 +1,6 @@
 # referer-parser node.js (JavaScript) library
 
-This is the node.js (JavaScript) implementation of [snowplow-referer-parser][https://github.com/snowplow-referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
+This is the node.js (JavaScript) implementation of [snowplow-referer-parser](https://github.com/snowplow-referer-parser), the library for extracting search marketing data from referer _(sic)_ URLs.
 
 The implementation uses the shared 'database' of known referers, which is stored in the [referer-parser repository](https://github.com/snowplow-referer-parser/referer-parser).
 

@@ -2625,6 +2625,7 @@
     "Renren": { "domains": ["renren.com"] },
     "Skype": { "domains": ["web.skype.com"] },
     "Skyrock": { "domains": ["skyrock.com"] },
+    "Slack": { "domains": ["app.slack.com"] },
     "Sonico.com": { "domains": ["sonico.com"] },
     "SourceForge": { "domains": ["sourceforge.net"] },
     "StackOverflow": { "domains": ["stackoverflow.com"] },
