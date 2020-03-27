@@ -1,7 +1,6 @@
 const fs = require("fs"),
   url = require("url"),
   querystring = require("querystring"),
-  yaml = require("js-yaml"),
   path = require("path");
 module.exports = Referer;
 
