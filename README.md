@@ -1,21 +1,19 @@
 # referer-parser node.js (JavaScript) library
 
-This is the node.js (JavaScript) implementation of [referer-parser][referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
+This is the node.js (JavaScript) implementation of [snowplow-referer-parser][https://github.com/snowplow-referer-parser], the library for extracting search marketing data from referer _(sic)_ URLs.
 
-The implementation uses the shared 'database' of known referers found in [`referers.yml`][referers-yml]
-
-The Javascript version of referer-parser is maintained by [Martin Katrenik][mkatrenik].
+The implementation uses the shared 'database' of known referers, which is stored in the [referer-parser repository](https://github.com/snowplow-referer-parser/referer-parser).
 
 ## Installation
 
-    $ npm install referer-parser
+    $ npm install @cgamesplay/referer-parser
 
 ## Usage
 
 Create a new instance of a Referer object by passing in the url you want to parse:
 
 ```js
-var Referer = require('referer-parser')
+var Referer = require('@cgamesplay/referer-parser')
 
 referer_url = 'http://www.google.com/search?q=gateway+oracle+cards+denise+linn&hl=en&client=safari'
 
@@ -36,7 +34,7 @@ console.log(r.uri)                // result of require('url').parse(...)
 Optionally, pass in the current URL as well, to handle internal referers
 
 ```js
-var Referer = require('referer-parser')
+var Referer = require('@cgamesplay/referer-parser')
 
 var referer_url = 'http://www.snowplowanalytics.com/about/team'
 var current_url = 'http://www.snowplowanalytics.com/account/profile'
@@ -55,6 +53,14 @@ console.log(r.search_term)        // null
 console.log(r.uri)                // result of require('url').parse(...)
 ```
 
+## Development
+
+There is a script to update the database from the [latest database](https://github.com/snowplow-referer-parser/referer-parser).
+
+```bash
+./script/update_db.sh
+```
+
 ## Copyright and license
 
 The referer-parser node.js (JavaScript) library is copyright 2013 Martin Katrenik.
@@ -67,10 +73,5 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-[referer-parser]: https://github.com/snowplow/referer-parser
-[referers-yml]: https://github.com/snowplow/referer-parser/blob/master/referers.yml
-
-[mkatrenik]: https://github.com/mkatrenik
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0

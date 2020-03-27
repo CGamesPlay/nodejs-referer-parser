@@ -1,6 +1,6 @@
 {
-  "name": "referer-parser",
-  "version": "0.0.4",
+  "name": "@cgamesplay/referer-parser",
+  "version": "1.0.20200326",
   "description": "library for extracting marketing attribution data (such as search terms) from referrer URLs",
   "main": "index.js",
   "scripts": {
@@ -14,10 +14,17 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   ],
-  "dependencies": {
-    "js-yaml": "~2.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "mocha": "~1.12.0"
-  }
+    "mocha": "^7.1.1",
+    "prettier": "^2.0.2"
+  },
+  "files": [
+    "data",
+    "index.js",
+    "LICENSE-2.0.txt",
+    "package.json",
+    "package-lock.json",
+    "README.md"
+  ]
 }
