@@ -6,11 +6,11 @@ date_version="$base_version.$(date +%Y%m%d)"
 
 ./script/update_db.sh
 
-if [ -z "$(git status -s -u no)" ]; then
+if [ -z "$(git status -s -uno)" ]; then
   echo "No changes to published database"
   exit 0
 fi
 
 sed -i '' -e 's/"version": ".*"/"version": "'$date_version'"/' package.json
-git add data
+git add data package.json
 git commit -m "Auto-update to $date_version"
